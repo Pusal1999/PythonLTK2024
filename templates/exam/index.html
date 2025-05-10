@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% load static %}
+  <style>
+    .jumbotron {
+      margin-bottom: 0px;
+      background-image: url("../../static/image/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Tahoma;
+    }
+  </style>
+  <body>
+    {% include "exam/navbar.html" %}
+    <br />
+    <section
+      id="section-jumbotron"
+      class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center"
+    >
+      <div class="container text-center">
+        <img
+          src="{% static 'image/pencil.png' %}"
+          alt="Pencil"
+          style="width: 120px; height: auto"
+          class="mb-4"
+        />
+        <h2
+          class="display-3 text-uppercase"
+          style="color: red; font-family: Tahoma, sans-serif; font-weight: bold"
+        >
+          HỆ THỐNG QUẢN LÝ<br />
+          THI TRẮC NGHIỆM
+        </h2>
+        <p class="display-4 d-none d-sm-block text-uppercase">NHÓM ??</p>
+        {% comment %}
+        <p class="lead text-uppercase font-weight-bold">
+          Đăng ký ngay để bắt đầu kỳ thi trực tuyến đầu tiên của bạn
+        </p>
+        {% endcomment %}
+
+        <p class="text-uppercase">
+          <strong> Bắt đầu hành trình của bạn tại đây:</strong>
+        </p>
+        <a
+          href="/student/studentsignup"
+          class="btn btn-lg btn-info text-uppercase"
+          style="padding-right: 35px; border-radius: 0%"
+          ><i class="fa fa-graduation-cap" aria-hidden="true"></i> Đăng ký làm
+          sinh viên</a
+        >
+
+        <br /><br /><br />
+      </div>
+    </section>
+    {% include "exam/footer.html" %}
+  </body>
+</html>
